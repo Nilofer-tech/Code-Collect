@@ -1,0 +1,59 @@
+Issue coming sometimes & sometimes not ------value is coming undefined sometimes & sometimes data is giving -----nullpointer exception-------without fixing to execute code can be handled using try n catch 
+
+handle exception in catch-------------------if anything or condition that has to execute if  error comes , hanlde error in catch block or in the code that will execute either error comes or not
+
+********************************************************************Debugging---------------------Debug code n check till where it execute n find the cause where it fails n handle
+
+viewchild method not called sometimes--------------------check the object through it is called is initialised or not bcz object must be initialised if it is calling method of its class, if its undefined method will not be called
+
+in JSON if we are extracting the value from an object that is not exist(undefined) then --->>>>>>             if this is passing as an argument then the method will not be called bcz we r trying to retrieve the value from undefined.
+
+$event-------------------------------passed as a complete object of event ------------>>>>>>>>$event.target.value---------------------------------to get the value of passed event  object 
+
+for all the events target doesn't exist  so convert it into (<HTMLInputElement>event.target).value        ------------------------------------------------------------------
+
+if values are getting from an object like getAssignedShorttest() then -----------------------it should set in the same setter of getter setAssignedShorttest
+
+
+example                      button clicked------service hit-----error in response-----variable value set to true-------------on true variable like certain execution is stopped
+example                      button clicked------service hit-----success in response-----variable value set to true(the previous set true value)-------------on true variable like certain execution is stopped so it is stopping the execution which should not----------------------but now variable value should not be true             
+if variable value is set to true on the basis of service response n service can be called muliple times then variable should set to false before the execution of service if they are in a method 
+
+@Mock -----to mock / to set values of object/ when (some condition).thenReturn(MockResponse)
+@InjectMocks----to call some method of java file for which we r writing the test case
+
+if a variable of sometype is used multiple times in class different methods------make it global -----instantiate it on different needs in different methods 
+
+If I have object of A type which consist of response  of A type it can be converted in list<A> lyk dis -------------------- A obj = "response" ; //               list<A> objList = new ArrayList<A>;//         objList.add(obj);
+Convert list/object input of some type  to another list/object type use ----------------------CollectionUtils.collect(inputtype, transformer object, new ArrayList<OutputType>)
+
+Convert JsonString to JsonObject -------------------------------------------------------------String jsonResponse= "JSON"      JSONObject jsonObject = new JSONObject(jsonResponse);
+To get JSONArray from JSONObject -----------------------------------------------------------JSONArray jsonArray = jsonObject.getJSONArray("arrayname")
+Convert JsonString to JsonObject of specific type-------------------------------------------------------------JSONAObject jsonA = CommonUtils.convertJSONToObject(stringresponse, JSONA.class);
+
+In an Array that will be collection of object ---------------to add each object to list ------use for-each/for loop-----------------------for(Object obj:jsonArray) {list.add(CommonUtils.convertJSONToObject(response, A.class);
+
+Check if list is empty -------------------------------------CollectionUtils.isNotEmpty(list);
+
+window.navigator.useragent-------to check the useragent of browser
+
+@JsonIgnoreProperties(ignoreUnknown = true)--------------------use in that class which contain the fields which may or may not present in Json response.
+
+convert any object to Stringvalue ---------------use object of ObjectMapper // ObjectMApper mapper = new ObjectMapper() ;           String jsonbody = mapper.readValueasString(object);
+
+if created the object and using its reference varible to return the data response on different id's   then ----------this reference variable must be allocated the memory for each id means it must be instantiated at each call request . if it refers the same memory allocation then on each id it will fetch the data if it exists or not 
+List<PartJson> list ;                    this list must be instantiated on each call request-------------------list = new ArrayList<PartJson>();
+
+
+Creating an object like ---------------->    new A();------------------allocating memory to its data member n method also called instantiation
+A ob = new A(); -------------------------> creating reference variable----------this reference variable refers the data members and methods allocated in memory and can access them
+B ob2 = ob  ; ------------------------------> now ob2 will also refers to same memory as referred by ob
+ob = null ----------------------------------> destroying this reference variable reference to memory ------it means this object can't b used to access Class attributes although these class attributes exist in memory.
+here ob2 can still access bcz its reference is not set to null
+
+
+XJSCustomerConcern main list present hai then XJSCustomerConcern k object se vo list fetch kr skte h--------------------------------> XJSCustomerConcern ob = new XJSCustomerConcern //////ob.getpartList();-----> it can be done ;;;;;;;;;;;;;;;if List<XJSCustomerConcern> is present in some object like XJSJob then we cannot fetch the parts list from this XJSCustomerConcernList directly bcz in list different values of objects n list are set at different indexes in 1 index there will be different objects and list set so xjsjob.getCustomerConcern().get(0).getpartsList();    //get(0) main index specify ki h
+
+Map<Key,Value> mapA = new HashMap<Key,Value> ---------------value of this mapA can be retrieved using key ------------------String value = mapA.get("Key")// value of map will be string//value = value.replaceAll("Bearer","") // any xyz operation can be performed on the received value-----------------mapA.put("Key",value);
+
+Ternary operator best way to put the value on the basis of condition like -----------------------------------boolean b = a>b? true : false
