@@ -57,3 +57,8 @@ XJSCustomerConcern main list present hai then XJSCustomerConcern k object se vo 
 Map<Key,Value> mapA = new HashMap<Key,Value> ---------------value of this mapA can be retrieved using key ------------------String value = mapA.get("Key")// value of map will be string//value = value.replaceAll("Bearer","") // any xyz operation can be performed on the received value-----------------mapA.put("Key",value);
 
 Ternary operator best way to put the value on the basis of condition like -----------------------------------boolean b = a>b? true : false
+
+//origin ---origin url
+//href-----url of the current page 
+window object contains the object of whole screen can be used to fetch any details of screen object
+window.location.href=window.location.origin        
