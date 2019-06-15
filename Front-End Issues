@@ -1,0 +1,35 @@
+// to apply time-out 
+setTimeout(()=>{I am a timeout function},1000);
+
+//to parse JSONString into observable type response
+let data: any = new Observable(
+observer=>{
+setTimeout(()=>{
+observer.next(Json.parse(anyJSON))},1000);})
+return data;
+
+//symptom-raw.json is present in resources folder fetching the file content into test file present into test folder
+//Read file from Resource 
+String fileName = "jsonresources/symptom-raw.json";
+ClassLoader classLoader = new SymptomApiUnitTest().getClass().getClassLoader();
+File file = new File(classLoader.getResource(fileName).getFile());
+String content = new String(Files.readAllBytes(file.toPath()));
+
+//Convert List to anothertypelist with transformation ---------
+listOfOperationJson = CollectionUtils.collect(listOfCustomerConcernXjsOperation,
+					this.xjsOperationToOperationJsonTf,
+					new ArrayList<OperationJson>());
+		}
+
+//to map the String value into Enum name
+public static CurrencyEnum getEnumByName(String name) {
+		CurrencyEnum currencyEnum = EnumUtils.getEnum(CurrencyEnum.class, name);
+		return currencyEnum;
+	}
+
+
+
+
+
+
+
